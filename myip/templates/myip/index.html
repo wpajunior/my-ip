@@ -1,0 +1,50 @@
+{% load i18n %}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% trans "My IP address is" %} {{remote_ip}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/static/admin/css/fonts.css">
+        <style type="text/css">
+          html {
+            height: 100%;
+          }
+          body {
+            background-color: #000000;
+            color: #00FF00;
+            font-family: Roboto, sans-serif;
+            font-size: 2em;
+            height: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+          }
+
+          .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+          }
+
+          h1 {
+            align-self: center;
+          }
+
+        </style>
+    </head>
+    <body>
+      <main class="center">
+          <div>
+            <h1>{% trans "My IP address is" %}: </h1>
+            <b>
+            {{remote_ip}}
+            {% if hostname %}
+            ({{hostname}})
+            {% endif %}
+            </b>
+          </div>
+      </main>
+    </body>
+</html>

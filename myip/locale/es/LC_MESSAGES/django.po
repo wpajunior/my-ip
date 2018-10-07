@@ -1,0 +1,3 @@
+#: templates/myip/index.html:5 templates/myip/index.html:37
+msgid "My IP address is"
+msgstr "Mi dirección IP es"

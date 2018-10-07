@@ -1,3 +1,9 @@
-#: templates/myip/index.html:5 templates/myip/index.html:37
+#: myip/templates/myip/index.html:6
+#, fuzzy
+#| msgid "My IP address is"
+msgid "What is my IP address?"
+msgstr "Meine IP-Adresse ist"
+
+#: myip/templates/myip/index.html:39
 msgid "My IP address is"
 msgstr "Meine IP-Adresse ist"

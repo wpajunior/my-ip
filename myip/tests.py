@@ -3,6 +3,16 @@ from django.urls import reverse
 import myip.views
 
 class IndexViewTests(SimpleTestCase):
+    def test_never_caching_headers(self):
+        response = self.client.get(reverse('myip:index'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response.has_header('Cache-Control'))
+        self.assertTrue('max-age=0' in response['Cache-Control'])
+        self.assertTrue('no-cache' in response['Cache-Control'])
+        self.assertTrue('no-store' in response['Cache-Control'])
+        self.assertTrue('must-revalidate' in response['Cache-Control'])
+
+
     def test_display_remote_ip_in_title(self):
         remote_ip = '10.10.10.10'
         response = self.client.get(reverse('myip:index'), REMOTE_ADDR=remote_ip)

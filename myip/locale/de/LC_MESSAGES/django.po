@@ -1,3 +1,12 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-20 11:45+0200\n"
+"Last-Translator: Wanderlei Pereira Alves Junior <wpajunior@gmail.com>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
 #: myip/templates/myip/index.html:6
 #, fuzzy
 #| msgid "My IP address is"

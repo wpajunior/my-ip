@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.cache import never_cache
-from .utils import get_client_ip, get_hostname
+from myip.utils import get_client_ip, get_hostname
 
 
 @never_cache
